@@ -658,7 +658,7 @@ body{
 
 [data-theme='dark'] .theme-btn {transform: rotate(-90deg);}
 
-
+.main > .title {margin-block: var(--spacing-3);}
 
 
 /*-----------------------------------*\
