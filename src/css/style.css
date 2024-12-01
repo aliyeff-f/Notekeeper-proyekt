@@ -456,6 +456,18 @@ body{
   visibility: visible;
 }
 
+.modal-overlay{
+  z-index: 6;
+  visibility: visible;
+  animation: fade-overlay var(--tr-duration-short) var(--tr-easing-linear) forwards;
+}
+
+@keyframes fade-overlay {
+  0% {opacity: 0;}
+  100%{opacity: 0.5;}
+}
+
+
 
 /*-----------------------------------*\
   #COMPONENTS
@@ -660,8 +672,10 @@ body{
   --state-layer-bg:var(--on-primary);
   padding-inline: var(--spacing-6);
   transition: box-shadow var(--tr-duration-short) var(--tr-easing-linear);
-  
  }
+
+.btn.fill:hover:not(:focus) {box-shadow: var(--shadow-1);}
+
 
 
 /**
