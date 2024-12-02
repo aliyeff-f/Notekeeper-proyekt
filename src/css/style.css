@@ -682,6 +682,26 @@ body{
  * Tooltip
  */
 
+ .tooltip{
+  position: fixed;
+  z-index: 4;
+  height: 24px;
+  display: grid;
+  align-items: center;
+  padding-inline: var(--spacing-2);
+  background-color: var(--inverse-surface);
+  color: var(--inverse-on-surface);
+  white-space: nowrap;
+  border-radius: var(--radius-extra-small);
+  pointer-events: none;
+  animation: fade var(--tr-duration-short) var(--tr-easing-linear) forwards;
+ }
+
+ @keyframes fade{
+  0%{opacity: 0;}
+  100%(opacity: 1;)
+ }
+
 
 
 
