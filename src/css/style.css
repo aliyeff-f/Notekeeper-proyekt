@@ -699,7 +699,7 @@ body{
 
  @keyframes fade{
   0%{opacity: 0;}
-  100%(opacity: 1;)
+  100%{opacity: 1;}
  }
 
 
@@ -865,7 +865,22 @@ body{
   z-index: 2;
 }
 
+.empty-notes{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: var(--on-surface-variant);
+  -webkit-user-select: none;
+  user-select: none;
+}
 
+.empty-notes .material-symbols-rounded{
+  font-size: 6.8rem;
+  opacity: 0.25;
+  margin-block-end: var(--spacing-4);
+  margin-inline: auto;
+}
 
 
 
