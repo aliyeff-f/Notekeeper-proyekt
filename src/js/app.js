@@ -22,3 +22,4 @@ addEventOnElements($sidebarTogglers,'click', function(){
     $sidebar.classList.toggle('active');
     $overlay.classList.toggle('active');
 });
+

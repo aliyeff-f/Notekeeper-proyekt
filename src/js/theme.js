@@ -5,6 +5,15 @@
 'use strict';
 
 
+const  toggleTheme = function () {
+    const  currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme == 'light'? 'dark' : 'light';
+
+    document.documentElement.setAttribute('data-theme',newTheme);
+    localStorage.setItem('theme',newTheme);
+}
+
+
 const  storedTheme = localStorage.getItem('theme');
 
 const systemThemeIsDark = window.matchMedia('prefers-color-scheme: dark').matches;
