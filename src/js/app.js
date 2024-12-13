@@ -4,7 +4,7 @@
 
 'use strict';
 
-import { addEventOnElements } from "./utils";
+import { addEventOnElements,getGreetingMsg } from "./utils";
 
 
 
@@ -23,3 +23,17 @@ addEventOnElements($sidebarTogglers,'click', function(){
     $overlay.classList.toggle('active');
 });
 
+const $greetElem = document.querySelector('[data-greeting]');
+const currentHour = new Date().getHours();
+
+$greetElem.textContent = getGreetingMsg(currentHour){
+    const greeting =
+    currentHour < 5 ? 'Night' :
+    currentHour < 12 ? 'Morning' :
+    currentHour < 15 ? 'Noon' :
+    currentHour < 17 ? 'Afternoon' :
+    currentHour <20 ? 'Evening' :
+    'Night';
+
+    return `Good ${greeting}`;
+}
