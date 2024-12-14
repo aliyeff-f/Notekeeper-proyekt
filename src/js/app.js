@@ -5,6 +5,7 @@
 'use strict';
 
 import { addEventOnElements,getGreetingMsg } from "./utils";
+import { Tooltip } from "./components/Tooltip";
 
 
 
@@ -23,17 +24,13 @@ addEventOnElements($sidebarTogglers,'click', function(){
     $overlay.classList.toggle('active');
 });
 
+const $tooltipElems = document.querySelectorAll('[data-tooltip]');
+$tooltipElems.forEach($elem => Tooltip($elem));
+
 const $greetElem = document.querySelector('[data-greeting]');
 const currentHour = new Date().getHours();
 
-$greetElem.textContent = getGreetingMsg(currentHour){
-    const greeting =
-    currentHour < 5 ? 'Night' :
-    currentHour < 12 ? 'Morning' :
-    currentHour < 15 ? 'Noon' :
-    currentHour < 17 ? 'Afternoon' :
-    currentHour <20 ? 'Evening' :
-    'Night';
+$greetElem.textContent = getGreetingMsg(currentHour);
 
-    return `Good ${greeting}`;
-}
+const  $currentDataElem = document.querySelector('[data-current-date]');
+$currentDataElem.textContent = new Date().toDateString().replace('',',')
