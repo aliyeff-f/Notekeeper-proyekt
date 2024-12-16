@@ -34,3 +34,26 @@ $greetElem.textContent = getGreetingMsg(currentHour);
 
 const  $currentDataElem = document.querySelector('[data-current-date]');
 $currentDataElem.textContent = new Date().toDateString().replace('',',')
+
+
+const $sidebarList = document.querySelector('[data-sidebar-list]');
+const $addNotebookBtn = document.querySelector('[data-add-notebook]');
+
+
+
+const showNotebookField = function () {
+
+    const $navItem = document.createElement('div');
+    $navItem.classList.add('nav-item');
+
+    $navItem.innerHTML =  `
+
+    <span class="text text-label-large" data-notebook-field></span>
+
+    <div class="state-layer"></div>
+
+    `;
+
+}
+
+$addNotebookBtn.addEventListener('click',showNotebookField);
