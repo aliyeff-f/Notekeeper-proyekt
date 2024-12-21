@@ -4,7 +4,7 @@
 
 'use strict';
 
-import { addEventOnElements,getGreetingMsg } from "./utils";
+import { addEventOnElements, getGreetingMsg, activeNotebook } from "./utils";
 import { Tooltip } from "./components/Tooltip";
 
 
@@ -53,6 +53,12 @@ const showNotebookField = function () {
     <div class="state-layer"></div>
 
     `;
+
+    $sidebarList.appendChild($navItem);
+
+    const $navItemField = $navItem.querySelector('[data-notebook-field]');
+
+    activeNotebook.call($navItem);
 
 }
 

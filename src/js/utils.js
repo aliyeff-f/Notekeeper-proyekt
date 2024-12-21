@@ -22,7 +22,18 @@ const getGreetingMsg = function (currentHour) {
     return `Good ${greeting}`;
 }
 
+
+let  $lastActiveNavItem;
+
+const activeNotebook = function () {
+    $lastActiveNavItem?.classList.remove('active');
+    this.classList.add('active');
+    $lastActiveNavItem = this;
+}
+
+
 export{
     addEventOnElements,
-    getGreetingMsg
+    getGreetingMsg,
+    activeNotebook
 }
