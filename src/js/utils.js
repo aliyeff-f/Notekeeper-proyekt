@@ -31,9 +31,15 @@ const activeNotebook = function () {
     $lastActiveNavItem = this;
 }
 
+const makeElemEditable = function($element) {
+    $element.setAttribute('contenteditable',true);
+    $element.focus();
+}
+
 
 export{
     addEventOnElements,
     getGreetingMsg,
-    activeNotebook
+    activeNotebook,
+    makeElemEditable
 }

@@ -4,7 +4,7 @@
 
 'use strict';
 
-import { addEventOnElements, getGreetingMsg, activeNotebook } from "./utils";
+import { addEventOnElements, getGreetingMsg, activeNotebook,makeElemEditable } from "./utils";
 import { Tooltip } from "./components/Tooltip";
 
 
@@ -60,6 +60,16 @@ const showNotebookField = function () {
 
     activeNotebook.call($navItem);
 
+    makeElemEditable($navItemField);
+
+    $navItemField.addEventListener('keydown',createNotebook);
+
 }
 
 $addNotebookBtn.addEventListener('click',showNotebookField);
+
+const createNotebook = function (event) {
+    if (event.key == 'Enter') {
+        
+    }
+}
