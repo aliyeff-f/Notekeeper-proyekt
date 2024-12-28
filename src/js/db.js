@@ -11,6 +11,10 @@ const initDB = function () {
 
     if(db) {
         notekeeperDB = JSON.parse(db);
+    } else{
+        notekeeperDB.notebooks = [];
+        localStorage.setItem('notekeeperDB',JSON.stringify
+            (notekeeperDB));
     }
 }
 
