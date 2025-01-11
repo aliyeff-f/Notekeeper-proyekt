@@ -19,3 +19,5 @@ const initDB = function () {
 }
 
 initDB();
+
+export const db = {}

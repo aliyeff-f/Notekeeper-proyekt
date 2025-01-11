@@ -6,6 +6,8 @@
 
 import { addEventOnElements, getGreetingMsg, activeNotebook,makeElemEditable } from "./utils";
 import { Tooltip } from "./components/Tooltip";
+import { db } from "./db";
+
 
 
 
